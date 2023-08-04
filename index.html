@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Full Background Example</title>
+  <title>UnderGround</title>
   <style>
     body {
       margin: 0;
@@ -13,25 +13,31 @@
       background-repeat: no-repeat;
       background-position: background-position: center 150px;
     }
-
-    /* Add any additional styles you want for your content here */
-    /* For example, setting text color and font */
-    h1 {
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-    }
-
-    p {
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
   </style>
 </head>
+</html>
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+  <script type="text/javascript">
+    var index=0;
+    function changeBanner(){ 
+      [].forEach.call(document.images,function (v,i) { document.images[i].hidden = i!==index});
+      index = (index+1) % document.images.length;
+    }
+    window.onload = function () {setInterval(changeBanner, 1000)};
+  </script>
+</head>
 <body>
-<!--   <h1>Hello, this is a full background example!</h1>
-  <p>Your content goes here...</p> -->
+  <div id="wrapper">
+    <div>
+        <img src="deunderground-v4-upload.png" width="900px" height="300px" />
+      <img src="deunderground-v6" width="900px" height="300px" />
+    </div>
+  </div>
 </body>
 </html>
