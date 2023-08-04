@@ -22,12 +22,15 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>JS Bin</title>
+<title>UnderGround</title>
   <script type="text/javascript">
     var index=0;
     function changeBanner(){ 
-      [].forEach.call(document.images,function (v,i) { document.images[i].hidden = i!==index});
+      // [].forEach.call(document.images,function (v,i) { document.images[i].hidden = i!==index});
       index = (index+1) % document.images.length;
+      background-image: url(document.images[i].hidden = i!==index)
+      background-size:cover;
+      background-position: center 150px
     }
     window.onload = function () {setInterval(changeBanner, 1000)};
   </script>
