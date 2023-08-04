@@ -26,18 +26,10 @@
   <script type="text/javascript">
     var index=0;
     function changeBanner(){ 
-      $(document).ready(function() {
-      var urls = ["deunderground-v6-purp.png" width="1280px", "deunderground-v6-blue.png" width="1280px", "deunderground-v6-orange.png" width="1280px", "deunderground-v6.png" width="1280px", "deunderground-v6-green.png" width="1280px"];
-    
-      var cout = 1;
-      $('body').css('background-image', 'url("' + urls[0] + '")');
-      setInterval(function() {
-        $('body').css('background-image', 'url("' + urls[cout] + '")');
-        cout == urls.length-1 ? cout = 0 : cout++;
-      }, 5000);
-      });
+      [].forEach.call(document.images,function (v,i) { document.images[i].hidden = i!==index});
+      index = (index+1) % document.images.length;
     }
-    window.onload = function () {setInterval(changeBanner, 1)};
+    window.onload = function () {setInterval(changeBanner, 1000)};
   </script>
 </head>
 <body>
